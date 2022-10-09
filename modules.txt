@@ -1,0 +1,81 @@
+Modules implemented in my program:
+
+Modules Used in ALL TASKS:
+
+pgmRead.c: This module will read the data of pgm file. This file will check magic number, dimension, gray value and image data.
+	   Functions in pgmRead.c:
+           void scanForWhiteSpace()
+	   int readCommentAndCheck()
+	   void getMagicNumber()
+           int readImageData()
+	   int readFile()
+	   int readImageDataBinary()
+	   int checkIfInputFileEmpty()
+	   int checkIfValidMagicNumber()
+	   int printBadCommentLineError()
+	   int checkWidthHeightMaxGrayAreValid()
+	   Header Files: FileInfo.h 
+
+pgmWrite.c: This module will write the pgm image in ASCII as well as Binary but depends on the give condition.
+	    Functions in pgmWrite.c:
+	    int writeToFile()
+	    int writeASCIIDataInBinary()
+	    int writeASCIIPropertyONLY()
+	    int writeReducedASCII()
+	    int writeASCIIPropertyBasedOnParameters()
+	    int writeASCIIDataInBinaryReduced()
+	    int writeBetweenMaxMin()
+	    int writeBetweenMaxMinBinary()
+	    Header Files: FileInfo.h 
+
+TASK 1: pgmEcho.c
+
+pgmEcho.c: Reads the pgm File with the function in pgmRead.c modules and writes the file with the function in pgmWrite.c.
+	   This modules also checks if the argument count is correct or not.
+	   Header Files: pgmCompare.h : pgmRead.h and pgmWrite.h
+
+TASK 2: pgmComp.c
+
+pgmComp.c: Reads the two pgm files with the functions in pgmRead.c and compares if the images are identical or not.
+	   This modules also checks if the argument count is correct or not.
+           The comparision of two pgm Images is done by the function in pgmCompare.c.
+
+pgmCompare: PgmCompare has the function that compares two pgm Images.
+	    Header Files: pgmCompare.h  
+
+
+Task 3: pgma2b.c & pgmb2a.c
+
+pgma2b.c: Reads the ASCII file with pgmRead.c and converts the ASCII file into Binary with functions in pgmWrite.c
+	  This modules also checks if the argument count is correct or not.
+	  Header Files: pgmRead.h and pgmWrite.h
+
+pgma2b.c: Reads the Binary file with pgmRead.c and converts the Binary file into ASCII with functions in pgmWrite.c
+	  This modules also checks if the argument count is correct or not.
+	  Header Files: pgmRead.h and pgmWrite.h
+
+Task 4: pgmReduce.c
+
+pgmReduce.c: Reads the pgmFile with pgmRead.c and reduces the file size with the given integer factor.
+	     This modules also checks if the argument count is correct or not.
+	     Header Files: pgmRead.h and pgmWrite.h
+
+Task5: pgmTile.c
+
+pgmTile.c: Reads the pgmFile with pgmRead.c and divides the pgmFile into nxn smaller images.
+       	   This modules also checks if the argument count is correct or not.
+	   Header Files: pgmRead.h and pgmWrite.h
+
+
+Task6: pgmAssemble.c
+
+pgmAssemble.c: Reads the smaller pgmFiles with pgmRead.c and assembles into a larger image.
+	       This modules also checks if the argument count is correct or not.
+	       Header Files: pgmRead.h pgmWrite.h
+
+
+
+
+ 
+
+
